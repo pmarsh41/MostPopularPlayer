@@ -2,17 +2,16 @@
 
 ;
 (function(exports) {
-    ///Bookmark, Line 74///
     "use strict";
     //Constructor Code
 
     var playerInstance = jwplayer('container');
-    //jwplayer('container').pause(); // BAD! :(
-    playerInstance.pause(); // Good :)
-}),
-var playerInstance = jwplayer('container');
 
-playerInstance.on('complete', function(e) {
-    setElement('complete', "Thanks for Watching");
+playerInstance.on('complete', function(msg) {
+    alert('Thanks' + msg);
 
 });
+
+object.trigger("alert", "for watching!");
+}),
+
